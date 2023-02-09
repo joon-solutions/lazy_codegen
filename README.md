@@ -34,7 +34,7 @@ To use this package, you need dbt installed with a profile configured. You will 
 Install the package in the same environment with your dbt installation by running: 
 
 ```bash
-pip install -e /your/directory
+pip install -e /your/package/directory
 ```
 
 This package should be executed inside your dbt repo. 
