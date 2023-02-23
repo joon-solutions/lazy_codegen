@@ -38,7 +38,7 @@ def ymlgen(source, output, yml_prefix):
 @click.option ('-d','--describe', is_flag = True, help='Describe table aftergenerating them')
 @click.option ('-l','--linting', is_flag = True, help='Describe table aftergenerating them')
 @click.option('--source-index', type=int, default=0, help='Index of the source to generate base models for')
-def genbase(source_yml, macro_name, output_path, source_index, model, describe, linting,custom_prefix, model_prefix):
+def generate(source_yml, macro_name, output_path, source_index, model, describe, linting,custom_prefix, model_prefix):
     tables, source_name = get_base_tables_and_source(source_yml, source_index)
     if model:
         tables = [model]
