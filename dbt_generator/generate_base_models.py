@@ -17,7 +17,7 @@ def generate_base_model(table_name, macro_name, source_name):
 		dbt run-operation  {macro_name} --args \'{{"source_name": "{source_name}", "table_name": "{table_name}"}}\'
 	'''
 	if system() == 'Windows':
-	    output = subprocess.check_output(["powershell.exe",bash_command]).decode("utf-8")
+	    output = subprocess.check_output(["powershell.exe",bash_command], shell=True).decode("utf-8")
 	else:
 		output = subprocess.check_output(bash_command, shell=True).decode("utf-8")
 	sql_index = output.lower().find('with source as')
